@@ -1,3 +1,4 @@
+import json
 students = []
 def add_student():
     student_id = int(input("Enter student ID: "))
@@ -11,6 +12,7 @@ def add_student():
     }
 
     students.append(student)
+    save_students()
     print("Student added successfully!")
 
 def view_students():
@@ -50,7 +52,7 @@ def update_student():
             student["marks"] = list(
                 map(int, input("Enter new marks separated by spaces: ").split())
             )
-
+            save_students()
             print("Student updated successfully!")
             return
 
@@ -62,6 +64,7 @@ def delete_student():
     for student in students:
         if student["id"] == student_id:
             students.remove(student)
+            save_students()
             print("Student deleted successfully!")
             return
 
@@ -88,6 +91,19 @@ def find_topper():
     print("Marks:", topper["marks"])
     print("Total Marks:", highest_total)
 
+def save_students():
+    with open("students.json", "w") as file:
+        json.dump(students, file, indent=4)
+
+def load_students():
+    global students
+
+    try:
+        with open("students.json", "r") as file:
+            students = json.load(file)
+    except (FileNotFoundError,json.JSONDecodeError):
+        students = []
+load_students()          
 while True:
     print("\n Student Management System ")
     print("1. Add Student")
