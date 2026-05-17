@@ -39,6 +39,55 @@ def search_student():
 
     print("Student not found.")
 
+def update_student():
+    student_id = int(input("Enter student ID to update: "))
+
+    for student in students:
+        if student["id"] == student_id:
+            print("Student found!")
+
+            student["name"] = input("Enter new name: ")
+            student["marks"] = list(
+                map(int, input("Enter new marks separated by spaces: ").split())
+            )
+
+            print("Student updated successfully!")
+            return
+
+    print("Student not found.")
+
+def delete_student():
+    student_id = int(input("Enter student ID to delete: "))
+
+    for student in students:
+        if student["id"] == student_id:
+            students.remove(student)
+            print("Student deleted successfully!")
+            return
+
+    print("Student not found.")
+
+def find_topper():
+    if not students:
+        print("No students found.")
+        return
+
+    topper = students[0]
+    highest_total = sum(topper["marks"])
+
+    for student in students[1:]:
+        total = sum(student["marks"])
+
+        if total > highest_total:
+            topper = student
+            highest_total = total
+
+    print("\n🏆 Topper Details")
+    print("ID:", topper["id"])
+    print("Name:", topper["name"])
+    print("Marks:", topper["marks"])
+    print("Total Marks:", highest_total)
+
 while True:
     print("\n Student Management System ")
     print("1. Add Student")
@@ -58,11 +107,11 @@ while True:
     elif choice == "3":
         search_student()
     elif choice == "4":
-        print("Update Student selected")
+        update_student()
     elif choice == "5":
-        print("Delete Student selected")
+        delete_student()
     elif choice == "6":
-        print("Find Topper selected")
+        find_topper()
     elif choice == "7":
         print("Thank you for using the Student Management System!")
         break
