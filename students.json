@@ -3,9 +3,9 @@
         "id": 101,
         "name": "geetha",
         "marks": [
-            85,
+            88,
             92,
-            88
+            85
         ]
     },
     {
@@ -18,66 +18,39 @@
         ]
     },
     {
-        "id": 101,
-        "name": "geetha",
-        "marks": [
-            85,
-            90,
-            88
-        ]
-    },
-    {
-        "id": 101,
-        "name": "geetha",
-        "marks": [
-            85,
-            90,
-            88
-        ]
-    },
-    {
-        "id": 102,
-        "name": "durga",
-        "marks": [
-            90,
-            89,
-            92
-        ]
-    },
-    {
         "id": 103,
-        "name": "chinnari",
+        "name": "prasanna",
         "marks": [
             90,
-            87,
-            92
+            77,
+            86
         ]
     },
     {
-        "id": 101,
-        "name": "geetha",
+        "id": 104,
+        "name": "jyothi",
         "marks": [
-            85,
             90,
-            88
+            97,
+            86
         ]
     },
     {
-        "id": 101,
-        "name": "geetha",
+        "id": 105,
+        "name": "akshitha",
         "marks": [
-            88,
-            92,
-            85
+            89,
+            76,
+            84
         ]
     },
     {
-        "id": 101,
-        "name": "geetha",
+        "id": 106,
+        "name": "pavani",
         "marks": [
-            88,
             92,
-            85
+            88,
+            90
         ]
     }
 ]

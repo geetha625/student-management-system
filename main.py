@@ -2,6 +2,10 @@ import json
 students = []
 def add_student():
     student_id = int(input("Enter student ID: "))
+    for student in students:
+     if student["id"] == student_id:
+        print("Student ID already exists.")
+        return
     name = input("Enter student name: ")
     marks = list(map(int, input("Enter 3 marks separated by spaces: ").split()))
 
