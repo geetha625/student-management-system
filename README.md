@@ -31,7 +31,9 @@ student_management_system/
 ## How to Run
 
 ```bash
-python main.py
+python main.py 
+
+```
 
 ## Concepts Practiced
 
@@ -47,10 +49,8 @@ python main.py
 
 ## Author
 
-## Author
-
-Geetha Gandham  
-B.Tech CSE (AI & ML) Student  
-Aspiring Software Engineer 
+Geetha Gandham
+B.Tech CSE[AIML] Student
+Aspiring Software Engineer
 
 
